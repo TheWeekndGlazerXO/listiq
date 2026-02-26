@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — ListIQ</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+  <div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="nav-left">
+          <a href="index.html" class="brand gradient-text brand-link">LISTIQ</a>
+        </div>
+
+      <nav class="nav">
+        <a href="#" class="nav-item active">Overview</a>
+        <a href="#" class="nav-item">Upload Analysis</a>
+        <a href="#" class="nav-item">Listing Optimizer</a>
+        <a href="#" class="nav-item">Product Evaluation</a>
+        <a href="#" class="nav-item">Supplier Finder</a>
+        <a href="#" class="nav-item">Ad Script AI</a>
+        <a href="#" class="nav-item">Store Health</a>
+        <a href="#" class="nav-item">Analytics</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="mini-btn gradient-text">Upgrade</button>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Topbar -->
+      <div class="topbar">
+        <div class="plan-info">
+          <span id="userPlan">Free Plan</span>
+          <span class="divider"></span>
+          <span id="usageInfo">3 / 5 analyses used</span>
+        </div>
+
+        <div class="top-actions">
+          <button class="mini-btn gradient-text">Subscription</button>
+          <button class="mini-btn gradient-text">Settings</button>
+          <button class="mini-btn gradient-text" onclick="logout()">Logout</button>
+        </div>
+      </div>
+
+      <!-- Overview Grid -->
+      <section class="overview-grid">
+
+        <div class="card">
+          <h3 class="gradient-text">Store Health Score</h3>
+          <div class="metric">
+            <span class="big-number">82</span>
+            <span class="metric-label">/100</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="gradient-text">Launch Readiness</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 68%"></div>
+          </div>
+          <span class="small-label">68% Ready</span>
+        </div>
+
+        <div class="card">
+          <h3 class="gradient-text">Top Product Pick</h3>
+          <p class="small-text">Trending portable ice bath</p>
+          <button class="mini-btn gradient-text">Evaluate</button>
+        </div>
+
+        <div class="card">
+          <h3 class="gradient-text">Weekly AI Advice</h3>
+          <p class="small-text">
+            Improve CTA contrast and reduce product title length by 15%.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- Upload Section -->
+      <section class="analyzer-section">
+        <h2 class="gradient-text">Conversion Analyzer</h2>
+        <p class="subtitle">Upload a listing, ad, or screenshot</p>
+
+        <div class="upload-box" id="uploadBox">
+          <input type="file" id="fileUpload" hidden />
+          <button class="mini-btn gradient-text" onclick="triggerUpload()">Upload Image</button>
+          <span id="fileName"></span>
+        </div>
+
+        <select id="analysisType" class="select-style">
+          <option value="full">Full Conversion Audit</option>
+          <option value="listing">Listing Structure</option>
+          <option value="image">Image Quality</option>
+          <option value="layout">Website Layout</option>
+          <option value="ad">Ad Creative</option>
+        </select>
+
+        <button class="primary-btn" onclick="analyze()">Run Analysis</button>
+      </section>
+
+      <!-- AI Output -->
+      <section class="results-section" id="resultsSection">
+        <div class="results-card">
+          <h3 class="gradient-text">AI Analysis Output</h3>
+          <div id="analysisOutput">
+            Results will appear here...
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

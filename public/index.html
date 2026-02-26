@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ListIQ — AI Commerce Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* HERO BUTTONS */
+    .primary-btn, .secondary-btn {
+      position: relative;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-size: 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.35s ease;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .brand-link {
+  text-decoration: none;
+}
+
+    .primary-btn {
+      background: linear-gradient(90deg, #6a00ff, #00e5ff);
+      color: white;
+      border: none;
+    }
+
+    .secondary-btn {
+      background: transparent;
+      border: 1px solid #333;
+      color: white;
+    }
+
+    /* HALO GLOW */
+    .primary-btn::before,
+    .secondary-btn::before {
+      content: "";
+      position: absolute;
+      inset: -3px;
+      border-radius: 32px;
+      background: linear-gradient(90deg, #6a00ff, #00e5ff);
+      opacity: 0;
+      filter: blur(18px);
+      transition: opacity 0.35s ease;
+      z-index: -1;
+    }
+
+    .primary-btn:hover::before,
+    .secondary-btn:hover::before {
+      opacity: 0.8;
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary-btn:hover {
+      box-shadow: 0 0 30px rgba(106, 0, 255, 0.35);
+    }
+
+    .secondary-btn:hover {
+      border-color: transparent;
+    }
+
+    /* PROJECTION SECTION */
+    .projection-section {
+      padding: 100px 10%;
+      background: #050505;
+      border-top: 1px solid #111;
+    }
+
+    .projection-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .projection-disclaimer {
+      font-size: 13px;
+      opacity: 0.6;
+      margin-bottom: 60px;
+    }
+
+    .projection-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 80px;
+    }
+
+    .projection-card {
+      flex: 1;
+      min-width: 220px;
+      background: #0a0a0a;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #111;
+      transition: 0.3s ease;
+    }
+
+    .projection-card:hover {
+      border-color: #222;
+      transform: translateY(-5px);
+    }
+
+    .projection-big {
+      font-size: 34px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      background: linear-gradient(90deg, #6a00ff, #00e5ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    /* CAPABILITY LIST */
+    .capability-list {
+      columns: 2;
+      gap: 40px;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    @media(max-width: 768px) {
+      .capability-list {
+        columns: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="brand gradient-text brand-link">LISTIQ</a>
+    </div>
+  
+    <div class="nav-center">
+      <a href="#features">Features</a>
+      <a href="#intelligence">AI Engine</a>
+      <a href="subscribe.html">Pricing</a>
+      <a href="admin.html" id="adminLink" style="display:none;">Admin</a>
+    </div>
+  
+    <div class="nav-right" id="navRight">
+      <!-- This will be dynamically injected -->
+    </div>
+  </nav>
+  
+  <!-- HERO -->
+  <section class="hero-section">
+    <h1>
+      AI Infrastructure<br>
+      for <span class="gradient-text">Commerce Operators</span>
+    </h1>
+  
+    <p class="hero-sub">
+      Optimize listings. Analyze products. Evaluate suppliers.
+      Increase conversions with intelligent automation.
+    </p>
+  
+    <div class="hero-actions">
+      <a href="subscribe.html" class="primary-btn">Explore Offers</a>
+      <a href="#features" class="secondary-btn">View Capabilities</a>
+    </div>
+  </section>
+  
+  <!-- FEATURE GRID -->
+  <section id="features" class="feature-grid">
+    <div class="feature-card">
+      <h3 class="gradient-text">Listing Optimizer</h3>
+      <p>AI-generated high-conversion product titles and descriptions.</p>
+    </div>
+  
+    <div class="feature-card">
+      <h3 class="gradient-text">Product Evaluation</h3>
+      <p>Demand, saturation, and profit modeling in seconds.</p>
+    </div>
+  
+    <div class="feature-card">
+      <h3 class="gradient-text">Supplier Finder</h3>
+      <p>Margin scoring and sourcing intelligence.</p>
+    </div>
+  
+    <div class="feature-card">
+      <h3 class="gradient-text">Ad Optimization</h3>
+      <p>Creative analysis and AI script generation.</p>
+    </div>
+  
+    <div class="feature-card">
+      <h3 class="gradient-text">Dynamic Pricing</h3>
+      <p>Elasticity-based smart pricing models.</p>
+    </div>
+  
+    <div class="feature-card">
+      <h3 class="gradient-text">Store Health Score</h3>
+      <p>Conversion diagnostics and UX intelligence.</p>
+    </div>
+  </section>
+  
+  <!-- INTELLIGENCE -->
+  <section id="intelligence" class="intelligence-section">
+    <h2 class="gradient-text">Unified Commerce Intelligence Engine</h2>
+    <p>
+      One system connecting store data, ad performance,
+      pricing logic, creative assets, and supplier intelligence —
+      analyzed continuously.
+    </p>
+  </section>
+  
+  <!-- PROJECTED RESULTS -->
+  <section class="projection-section">
+    <h2 class="gradient-text">Projected Performance Impact</h2>
+  
+    <div class="projection-disclaimer">
+      The following results represent expected performance improvements based on modeled data.
+      Outcomes vary by niche and execution quality.
+    </div>
+  
+    <div class="projection-grid">
+      <div class="projection-card">
+        <div class="projection-big">+12–22%</div>
+        <div>Estimated Conversion Rate Lift</div>
+      </div>
+  
+      <div class="projection-card">
+        <div class="projection-big">2–4x</div>
+        <div>Faster Product Validation</div>
+      </div>
+  
+      <div class="projection-card">
+        <div class="projection-big">+8–18%</div>
+        <div>Average Margin Optimization</div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- AUTH + NAV LOGIC -->
+  <script type="module">
+  import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+  
+  const supabase = createClient(
+    "https://nugtwmuiztbbhvuakrnu.supabase.co",
+    "sb_publishable_UO7wZCYbFqW1SrU02ai7BA_IFP2Mvbu"
+  )
+  
+  const navRight = document.getElementById("navRight")
+  const adminLink = document.getElementById("adminLink")
+  
+  async function loadNavbar() {
+  
+    const { data: { session } } = await supabase.auth.getSession()
+    const user = session?.user
+  
+    if (user) {
+  
+      // Show admin if correct email
+      if (user.email === "zioncmulangala@gmail.com") {
+        adminLink.style.display = "inline-block"
+      }
+  
+      navRight.innerHTML = `
+        <a href="subscribe.html" class="mini-container gradient-text">Subscribe</a>
+        <a href="#" id="logoutBtn" class="mini-container gradient-text">Logout</a>
+      `
+  
+      document.getElementById("logoutBtn").addEventListener("click", async (e) => {
+        e.preventDefault()
+        await supabase.auth.signOut()
+        window.location.reload()
+      })
+  
+    } else {
+  
+      adminLink.style.display = "none"
+  
+      navRight.innerHTML = `
+        <a href="login.html" class="mini-container gradient-text">Login</a>
+        <a href="signup.html" class="mini-container gradient-text">Sign Up</a>
+        <a href="subscribe.html" class="mini-container gradient-text">Subscribe</a>
+      `
+    }
+  }
+  
+  // Run immediately
+  loadNavbar()
+  
+  // React to auth state changes automatically
+  supabase.auth.onAuthStateChange(() => {
+    loadNavbar()
+  })
+  </script>
+  
+  </body>
+  </html>

@@ -1,0 +1,22 @@
+{
+    "name": "listiq",
+    "version": "1.0.0",
+    "main": "server/server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server/server.js"
+    },
+    "dependencies": {
+        "@supabase/supabase-js": "^2.39.0",
+        "cors": "^2.8.6",
+        "dotenv": "^16.6.1",
+        "express": "^4.22.1",
+        "node-fetch": "^3.3.2",
+        "openai": "^4.0.0",
+        "stripe": "^20.4.0"
+    },
+    "description": "",
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

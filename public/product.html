@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Evaluation - ListIQ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<nav class="navbar">
+    <div class="nav-left">
+        <a href="index.html" class="brand gradient-text brand-link">LISTIQ</a>
+      </div>
+  
+    <div class="nav-center">
+      <a href="#">Features</a>
+      <a href="subscribe.html">Pricing</a>
+      <a href="#">Templates</a>
+      <a href="#">Integrations</a>
+    </div>
+  
+    <div class="nav-right">
+      <a href="login.html" class="nav-btn">Login</a>
+      <a href="signup.html" class="nav-btn">Sign Up</a>
+      <a href="subscribe.html" class="nav-btn nav-cta">Subscribe</a>
+    </div>
+  </nav>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo"><span class="bolt">⚡</span><span class="product-name">LISTIQ</span></div>
+      <nav>
+        <ul>
+          <li>Dashboard</li>
+          <li>Upload Analysis</li>
+          <li>Listing Optimizer</li>
+          <li class="active">Product Evaluation</li>
+          <li>Supplier Compare</li>
+          <li>Reports</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <h1>Product Evaluation</h1>
+      <input type="text" placeholder="Paste product link or data..." id="productInput">
+      <button class="accent-btn" onclick="evaluateProduct()">Evaluate</button>
+
+      <div class="score-grid">
+        <div class="score-item">Margin Potential <span>85</span></div>
+        <div class="score-item">Shipping Risk <span>20</span></div>
+        <div class="score-item">Brandability <span>78</span></div>
+        <div class="score-item">Market Saturation <span>60</span></div>
+        <div class="score-item">Ad Viability <span>92</span></div>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
